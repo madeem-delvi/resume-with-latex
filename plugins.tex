@@ -1,9 +1,75 @@
-\documentclass[a4paper,11pt]{letter}
-\usepackage[default]{sourcesanspro}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{geometry}
-\usepackage{fancyhdr}
-\usepackage{fontawesome}  % Font awesome icons
-\usepackage[utf8]{inputenc}
-\usepackage{setspace}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{helvet}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% -------- Custom commands
+% Consistent vertical spacing + small font
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% #1: bolded, top left; Job title 
+% #2: right, date
+% #3: small text, organization and location
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {\normalsize\textbf{#1}} & {\normalsize #2} \\
+      {\normalsize\textit{#3}} &{\normalsize\textit{#4}} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{
+    \normalsize
+    \begin{itemize}
+    [ leftmargin=0.15in, label={} ]
+}
+\newcommand{\resumeSubHeadingListEnd}{
+    \end{itemize}
+}
+\newcommand{\resumeItemListStart}{
+    \normalsize
+    \begin{itemize}
+}
+\newcommand{\resumeItemListEnd}{
+    \end{itemize}
+    \vspace{-5pt}
+}
+% Makes list items into bullets
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% ----- UNCOMMENT WHEN NEEDED
+% --- Sub-Subheadings
+% \newcommand{\resumeSubSubheading}[2]{
+%     \item
+%     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%       \textit{\small#1} & \textit{\small #2} \\
+%     \end{tabular*}\vspace{-7pt}
+% }
+% --- Sub Items
+% \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
