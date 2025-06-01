@@ -1,44 +1,27 @@
-\documentclass[letterpaper,10pt]{article}
+\input{edit}
 \input{plugins}
 
-% Sections formatting
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-\urlstyle{same}
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-% ATS parsable
-\pdfgentounicode=1
+\geometry{a4paper, top=4cm, bottom=3cm, left=2.5cm, right=2.5cm}
+
+\makeatletter
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{
+    {\large \textbf{\@author}}\\
+    {\faHome}  \home \\
+    
+    {\faEnvelopeO} \href{mailto:\email} \email\\
+    {\faPhone}  \phone
+    }
+\fancyhead[R]{\textbf{\today}}
+\medskip\vspace*{1pt} 
 
 \begin{document}
-\begin{center}
-    % Name
-    \textbf{\Huge \scshape Francesca M Pham} \\ \vspace{1pt}
-    % Phone Number
-    \small { 813-500-8194 } $|$ 
-    % Email
-    \href{mailto:francescapham5055@gmail.com}
-    { francescapham5055@gmail.com } $|$ 
-    % LinkedIn
-    \href{www.linkedin.com/in/francesca-fmp}
-    { www.linkedin.com/in/francesca-fmp } $|$
-    % Gitub
-    \href{https://github.com/madeem-delvi}
-    { github.com/madeem-delvi }
-\end{center}
-
-\input{sections/education}
-\input{sections/experience}
-\input{sections/leadership}
-\input{sections/projects}
-\input{sections/skills}
-
+        \normalsize Dear \hiringManager,
+        \body
+        \bigskip
+        \noindent
+        Best regards,\\
+        \textbf{\@author}
+    \makeatother
 \end{document}
